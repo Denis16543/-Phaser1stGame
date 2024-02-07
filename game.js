@@ -80,6 +80,8 @@ function collectStar (player, star)
 {
     star.disableBody(true, true);
 }
+this.physics.add.collider(stars, platforms);
+this.physics.add.overlap(player, stars, collectStar, null, this);
     }
 
     function update ()
