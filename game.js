@@ -22,6 +22,7 @@ function preload() {
     this.load.image('ground', 'assets/platform.png');
     this.load.image('star', 'assets/star.png');
     this.load.image('bomb', 'assets/bomb.png');
+    this.load.image('Spike', 'assets/Spike.png');
     this.load.spritesheet('dude',
         'assets/dude.png',
         { frameWidth: 32, frameHeight: 48 }
@@ -101,7 +102,7 @@ function create() {
             bomb.setBounce(1);
             bomb.setCollideWorldBounds(true);
             bomb.setVelocity(Phaser.Math.Between(-200, 200), 20);
-
+bomb.setScale(0.1,0.1)
         }
     }
     scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
